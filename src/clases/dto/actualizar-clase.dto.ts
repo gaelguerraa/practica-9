@@ -1,4 +1,12 @@
 // Todo opcional: un PATCH manda solo lo que cambia.
-export interface ActualizarClaseDto {
+import { IsOptional, IsString } from "class-validator";
+
+export class ActualizarClaseDto {
+  @IsOptional()
+  @IsString()
   nombre?: string;
+
+  @IsOptional()
+  @IsString()
+  descripcion?: string;
 }
